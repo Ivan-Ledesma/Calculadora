@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="calc-container">
+            <section class="header">
+                <div class="title">Calc</div>
+                <div class="themes">theme</div>
+            </section>
+            <section class="result">
+                <div id="valor-anterior"></div>
+                <div id="valor-actual"></div>
+            </section>
+            <section class="keyboard">
+                <button class="button numero">7</button>
+                <button class="button numero">8</button>
+                <button class="button numero">9</button>
+                <button id="borrar" class="button">&larr;</button>
+                <button class="button numero">4</button>
+                <button class="button numero">5</button>
+                <button class="button numero">6</button>
+                <button class="button operador" value="sumar">+</button>
+                <button class="button numero">1</button>
+                <button class="button numero">2</button>
+                <button class="button numero">3</button>
+                <button class="button operador" value="restar">-</button>
+                <button class="button numero">.</button>
+                <button class="button numero">0</button>
+                <button class="button operador" value="dividir">/</button>
+                <button class="button operador" value="multiplicar">X</button>
+                <button id="reset" class="button reset">RESET</button>
+                <button class="button equal operador" value="igual">=</button>
+            </section>
+        </div>
+    </main>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

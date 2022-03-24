@@ -1,0 +1,85 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64719A;
+}
+.calc-container{
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.calc-container .header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.calc-container > .result{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px 0px;
+    min-height: 80px;
+    border-radius: 8px;
+    background-color: #181F32;
+    color: white;
+    font-size: 25px;
+}
+.calc-container > .result > div{
+    margin: 5px 0;
+}
+
+.keyboard{
+    box-sizing: border-box;
+    background-color: #252D42;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 8px;
+    padding: 10px;
+}
+.keyboard .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 21px;
+    padding: 12px 6px;
+    margin: 12px 6px;
+    color: #474747;
+    width: 110px;
+    height: 50px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px #141824;
+}
+.keyboard .button:hover{
+    background-color: rgb(158, 158, 158);
+    cursor: pointer;
+    color: black;
+}
+.keyboard .equal{
+    font-size: 30px;
+    background-color:#D13F30;
+    color: white;
+}
+.keyboard .reset{
+    background-color: #64719A;
+    color: white;
+}
+.keyboard .delete{
+    background-color: #64719A;
+    color: white;
+}
