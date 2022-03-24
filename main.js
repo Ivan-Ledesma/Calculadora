@@ -16,18 +16,18 @@ numeros.forEach(numero =>{
     }); 
 });
 
+signos.forEach(signo =>{
+    signo.addEventListener("click", ()=>{
+        display.computar(signo.value);
+    })
+})
+
 reset.addEventListener("click",()=>{
     display.resetearDisplay();
 })
 
 borrar.addEventListener("click",()=>{
     display.borrarNumero();
-})
-
-signos.forEach(signo =>{
-    signo.addEventListener("click", ()=>{
-        display.computar(signo.value);
-    })
 })
 
 

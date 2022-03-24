@@ -5,9 +5,14 @@ export class Display{
         this.displayValorActual = displayValorActual;
         this.displayValorAnterior = displayValorAnterior;
         this.calculador = new Calculadora();
-        this.operador = undefined;
         this.valorActual = '';
         this.valorAnterior = '';
+        this.mapSignos = {
+            sumar: '+',
+            restar: '-',
+            dividir: '/',
+            multiplicar: '*'
+        }
     }
 
     agregarNumero(numero){
@@ -18,7 +23,7 @@ export class Display{
     
     imprimirValores(){
         this.displayValorActual.textContent = this.valorActual;
-        this.displayValorAnterior.textContent = this.valorAnterior;
+        this.displayValorAnterior.textContent = `${this.valorAnterior} ${this.mapSignos[this.operador] || ''} `;
     }
 
     borrarNumero(){
@@ -34,7 +39,7 @@ export class Display{
     }
 
     computar(tipo){
-        this.operador !== 'igual' && this.calcular();
+        this.operador !== 'igual' && this.calcular(); 
         this.operador = tipo;
         this.valorAnterior = this.valorActual || this.valorAnterior;
         this.valorActual = '';
@@ -42,19 +47,11 @@ export class Display{
     }
 
     calcular(){
-        const valorAnterior = parseFloat(this.valorAnterior);
         const valorActual = parseFloat(this.valorActual);
+        const valorAnterior = parseFloat(this.valorAnterior);
         
-        console.log(typeof(valorActual));
-        console.log(typeof(valorAnterior));
-
-        if(isNaN(valorActual) && isNaN(valorAnterior));{
-            const valorAnterior = parseFloat(this.valorAnterior);
-            const valorActual = parseFloat(this.valorActual);
-        }
-
-        console.log(this.operador)
-        return
+        if(isNaN(valorActual) || isNaN(valorAnterior))return;
+        
         this.valorActual = this.calculador[this.operador](valorActual,valorAnterior);
     }
 
